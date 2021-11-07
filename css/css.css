@@ -1,0 +1,217 @@
+/*General*/
+* {
+  box-sizing: border-box;
+}
+/* ********** Custom Properties ********** */
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  font-size: 16px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 3vw;
+  font-size: 4.5vw;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contactotexto{
+  /*display: inline-block;
+  padding:16px;
+  border-radius: 8px;
+  background-color: #25D366;color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;*/
+color: #ddd;
+font-size: 16px;
+font-family: sans-serif;
+font:bold;
+
+
+
+}
+/* Footer
+
+      position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+
+*/
+
+/*
+centrado del lateral 
+*/
+
+.ti_tle {
+  color: rgb(4, 7, 6);
+  font-size: 80%;
+  font:bold;
+}
+
+.footer {
+    width: 95%;
+    height: 25%;
+    font-size: 90%;
+    color: #ddd;
+    padding: 15px;
+    text-align: center;
+    background: rgb(22, 22, 22);
+    margin-top: 15px;
+  }
+/* Para el contacto*/
+
+
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+/**/
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  .ti_tle{
+  color: rgb(22, 21, 21);
+  font-size: 0.85rem;
+  font:bold;
+}
+
+}
+/*Otro metodos basico*/
+.cards {
+  box-shadow: 0 4px 8px 0 rgba(78, 47, 47, 0.5);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: rgb(17, 16, 16);
+  font-size: 18px;
+}
+
+input {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/*Otro escrip*/
+/*
+.grid {
+  display: flex;
+  justify-content: space-betwen;
+}
+
+
+
+.grid .item2 {
+  color: black;
+  border: 5px solid #12121225;
+  flex: 33%;
+}
+*/
+/*Estilos Grid*/
+
+.grid {
+  display: grid;
+  grid-gap: 10px;  /* Simply adjust this value !*/
+  grid-template-columns: repeat(2, 1fr); /* OR grid-template-columns: 1fr 1fr 1fr;*/
+  grid-auto-rows: 1fr;
+  border:1px solid green 
+}
+
+.grid>div {
+  border: 1px solid red;
+ 
+}
+
+
+
+@media screen and (max-width: 800px) {
+ 
+  .grid {
+ 
+  grid-template-columns: repeat(1, 1fr); 
+}
+.ti_tle{
+  color: rgb(34, 33, 33);
+  font-size: 0.85rem;
+  font:bold;
+}
+}
